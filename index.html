@@ -153,11 +153,11 @@ Book Now
 <section id="contact" class="py-20 px-5">
 <div class="max-w-4xl mx-auto text-center fade-in">
 <h2 class="text-4xl md:text-5xl gold mb-10">Book Appointment</h2>
-<form class="card p-8 rounded-3xl space-y-5">
-<input type="text" placeholder="Full Name" class="w-full p-4 bg-[#24272B] border border-gold rounded-xl">
-<input type="tel" placeholder="Phone Number" class="w-full p-4 bg-[#24272B] border border-gold rounded-xl">
-<textarea placeholder="Service Required" class="w-full p-4 bg-[#24272B] border border-gold rounded-xl"></textarea>
-<button class="w-full bg-gold text-black py-4 rounded-xl font-semibold">
+<form id="bookingForm" class="card p-8 rounded-3xl space-y-5">
+<input type="text" placeholder="Full Name" required class="w-full p-4 bg-[#24272B] border border-gold rounded-xl">
+<input type="tel" placeholder="Phone Number" required class="w-full p-4 bg-[#24272B] border border-gold rounded-xl">
+<textarea placeholder="Service Required" rows="4" class="w-full p-4 bg-[#24272B] border border-gold rounded-xl"></textarea>
+<button type="submit" class="w-full bg-gold text-black py-4 rounded-xl font-semibold">
 Send Request
 </button>
 </form>
@@ -169,12 +169,20 @@ Send Request
 </footer>
 
 <script>
-const observer = new IntersectionObserver(entries => {
-entries.forEach(entry => {
-if(entry.isIntersecting){
-entry.target.classList.add('show');
-}
+// Form Submission Alert
+document.getElementById('bookingForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert("✅ Thank you! Your booking request has been sent to Fusion Salon Hisar.\n\nWe will contact you soon!");
+    this.reset(); // Clear the form after submission
 });
+
+// Fade-in Animation
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
 });
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
