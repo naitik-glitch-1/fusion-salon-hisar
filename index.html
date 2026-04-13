@@ -14,6 +14,9 @@
                         url('https://imagehairlondon.co.uk/wp-content/uploads/2025/09/keratin-treatment-application-salon.jpg-1024x683.png') center/cover no-repeat;
         }
         .logo-font { font-family: 'Playfair Display', serif; }
+        .gold { color: #D4AF37; }
+        .bg-gold { background-color: #D4AF37; }
+        .border-gold { border-color: #D4AF37; }
     </style>
 </head>
 <body class="font-sans bg-white">
@@ -22,20 +25,20 @@
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-5 py-5 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="w-11 h-11 bg-pink-600 rounded-2xl flex items-center justify-center text-3xl">💈</div>
-                <h1 class="logo-font text-4xl font-bold text-pink-700">Fusion</h1>
+                <div class="w-11 h-11 bg-gold rounded-2xl flex items-center justify-center text-3xl">💈</div>
+                <h1 class="logo-font text-4xl font-bold gold">Fusion</h1>
             </div>
             
             <div class="hidden md:flex gap-8 text-lg">
-                <a href="#home" class="hover:text-pink-600">Home</a>
-                <a href="#about" class="hover:text-pink-600">About</a>
-                <a href="#services" class="hover:text-pink-600">Services</a>
-                <a href="#gallery" class="hover:text-pink-600">Gallery</a>
-                <a href="#contact" class="hover:text-pink-600">Contact</a>
+                <a href="#home" class="hover:text-yellow-600">Home</a>
+                <a href="#about" class="hover:text-yellow-600">About</a>
+                <a href="#services" class="hover:text-yellow-600">Services</a>
+                <a href="#gallery" class="hover:text-yellow-600">Gallery</a>
+                <a href="#contact" class="hover:text-yellow-600">Contact</a>
             </div>
             
             <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" 
-                    class="bg-pink-600 text-white px-7 py-3 rounded-3xl font-semibold hover:bg-pink-700 transition">
+                    class="bg-gold text-white px-7 py-3 rounded-3xl font-semibold hover:opacity-90 transition">
                 Book Now
             </button>
         </div>
@@ -48,8 +51,8 @@
             <p class="text-2xl md:text-4xl mb-6">"Where Everything is Better..."</p>
             <p class="text-lg md:text-xl max-w-2xl mx-auto mb-10">Premium Unisex Salon • Bridal Makeup • Hair Styling • Nail Art</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#contact" class="bg-white text-pink-700 px-10 py-5 rounded-3xl text-xl font-semibold hover:scale-105 transition">Book Appointment</a>
-                <a href="https://www.instagram.com/fusionsalonhisar" target="_blank" class="border-2 border-white px-10 py-5 rounded-3xl text-xl font-semibold hover:bg-white hover:text-pink-700 transition">Instagram</a>
+                <a href="#contact" class="bg-white gold px-10 py-5 rounded-3xl text-xl font-semibold hover:scale-105 transition">Book Appointment</a>
+                <a href="https://www.instagram.com/fusionsalonhisar" target="_blank" class="border-2 border-white px-10 py-5 rounded-3xl text-xl font-semibold hover:bg-white gold transition">Instagram</a>
             </div>
         </div>
     </section>
@@ -65,7 +68,8 @@
                         From stunning bridal makeup to modern hair transformations and professional nail art — we make you look and feel your best.
                     </p>
                 </div>
-<img src="https://salondeauville.com/wp-content/uploads/2024/06/keratin-hair-straightening-montreal-2.png" alt="Salon Interior" class="rounded-3xl shadow-2xl w-full hover:scale-105 transition">            </div>
+                <img src="https://salondeauville.com/wp-content/uploads/2024/06/keratin-hair-straightening-montreal-2.png" alt="Salon Interior" class="rounded-3xl shadow-2xl w-full hover:scale-105 transition">
+            </div>
         </div>
     </section>
 
@@ -75,22 +79,22 @@
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">Our Services</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition">
-                    <i class="fas fa-cut text-5xl text-pink-600 mb-6"></i>
+                    <i class="fas fa-cut text-5xl gold mb-6"></i>
                     <h3 class="text-2xl font-semibold">Hair Styling & Cuts</h3>
                     <p class="text-gray-600 mt-2">Modern cuts, keratin & hair spa</p>
                 </div>
                 <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition">
-                    <i class="fas fa-paint-brush text-5xl text-pink-600 mb-6"></i>
+                    <i class="fas fa-paint-brush text-5xl gold mb-6"></i>
                     <h3 class="text-2xl font-semibold">Bridal Makeup</h3>
                     <p class="text-gray-600 mt-2">HD & Traditional Bridal Looks</p>
                 </div>
                 <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition">
-                    <i class="fas fa-spa text-5xl text-pink-600 mb-6"></i>
+                    <i class="fas fa-spa text-5xl gold mb-6"></i>
                     <h3 class="text-2xl font-semibold">Hair Treatments</h3>
                     <p class="text-gray-600 mt-2">Keratin • Smoothening • Coloring</p>
                 </div>
                 <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition">
-                    <i class="fas fa-hand-sparkles text-5xl text-pink-600 mb-6"></i>
+                    <i class="fas fa-hand-sparkles text-5xl gold mb-6"></i>
                     <h3 class="text-2xl font-semibold">Nail Art</h3>
                     <p class="text-gray-600 mt-2">Extensions • Gel • Designs</p>
                 </div>
@@ -98,32 +102,17 @@
         </div>
     </section>
 
-    <!-- Gallery -->
-    <section id="gallery" class="py-20 px-5 bg-white">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">Our Work</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-0.5">
-    <img src="https://img.freepik.com/free-photo/women-making-preparations-wedding_23-2149184417.jpg?semt=ais_hybrid&w=740&q=80" width="300" height="200" alt="Bridal" class="rounded-3xl shadow hover:scale-105 transition">
-    <img src="https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGFpciUyMHNhbG9ufGVufDB8fDB8fHww" width="300" height="200" alt="Hair" class="rounded-3xl shadow hover:scale-105 transition">
-    <img src="https://luxurylondon.co.uk/wp-content/uploads/2023/07/Townhouse-Kings-Road-Chelsea-nail-bar.jpg" width="300" height="200" alt="Nail" class="rounded-3xl shadow hover:scale-105 transition">
-    <img src="https://images.squarespace-cdn.com/content/v1/6091e6edc456d57a746254a2/1850bf2a-85fe-4011-81ef-5e726d5ed752/Salon+Main+IMG_0067.jpg" width="300" height="200" alt="Salon" class="rounded-3xl shadow hover:scale-105 transition">
-    <img src="https://images.fresha.com/locations/location-profile-images/2568286/5628453/8d587ccc-1c68-4ae1-b1fa-984e1148762a-EstiloUrbanoGentsSalon-AE-EmirateOfUmmAlQuwain-UmmAlQuwain-Fresha.jpg?class=venue-gallery-mobile&f_width=3840" width="300" height="200" alt="Interior" class="rounded-3xl shadow hover:scale-105 transition">
-    <img src="https://assets.clevelandclinic.org/transform/1beff69c-8478-426f-ab82-45bd89127b1c/keratin-hair-treatment-1196374963_770x533_jpg" width="300" height="200" alt="Keratin" class="rounded-3xl shadow hover:scale-105 transition">
-</div>
-        </div>
-    </section>
-
     <!-- Contact -->
-    <section id="contact" class="py-20 px-5 bg-pink-50">
+    <section id="contact" class="py-20 px-5 bg-yellow-50">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">Book Your Appointment</h2>
             <div class="grid md:grid-cols-2 gap-10">
                 <form id="bookingForm" class="bg-white p-8 md:p-10 rounded-3xl shadow space-y-6">
-                    <input type="text" placeholder="Full Name" required class="w-full p-5 rounded-2xl border focus:border-pink-600 outline-none">
-                    <input type="tel" placeholder="Phone Number" required class="w-full p-5 rounded-2xl border focus:border-pink-600 outline-none">
-                    <input type="date" required class="w-full p-5 rounded-2xl border focus:border-pink-600 outline-none">
-                    <textarea placeholder="Which service do you want?" rows="4" class="w-full p-5 rounded-2xl border focus:border-pink-600 outline-none"></textarea>
-                    <button type="submit" class="w-full bg-pink-600 text-white py-6 rounded-3xl text-xl font-semibold hover:bg-pink-700">Send Request</button>
+                    <input type="text" placeholder="Full Name" required class="w-full p-5 rounded-2xl border focus:border-yellow-600 outline-none">
+                    <input type="tel" placeholder="Phone Number" required class="w-full p-5 rounded-2xl border focus:border-yellow-600 outline-none">
+                    <input type="date" required class="w-full p-5 rounded-2xl border focus:border-yellow-600 outline-none">
+                    <textarea placeholder="Which service do you want?" rows="4" class="w-full p-5 rounded-2xl border focus:border-yellow-600 outline-none"></textarea>
+                    <button type="submit" class="w-full bg-gold text-white py-6 rounded-3xl text-xl font-semibold hover:opacity-90">Send Request</button>
                 </form>
 
                 <div class="bg-white p-8 md:p-10 rounded-3xl shadow">
