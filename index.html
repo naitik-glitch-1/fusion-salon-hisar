@@ -26,9 +26,9 @@ body {
 .bg-gold { background-color: #D4AF37; }
 .border-gold { border-color: #D4AF37; }
 
-/* Uniform Background - All sections same color */
-.section-dark, .section-soft {
-    background: #24272B;
+/* Uniform Background for ALL sections */
+section, nav, footer {
+    background-color: #24272B !important;
 }
 
 .card {
@@ -57,8 +57,9 @@ body {
 </style>
 </head>
 <body class="font-sans">
+
 <!-- NAVBAR -->
-<nav class="section-dark border-b border-gold sticky top-0 z-50">
+<nav class="border-b border-gold sticky top-0 z-50">
 <div class="max-w-7xl mx-auto px-5 py-5 flex justify-between items-center">
 <div class="flex items-center gap-3">
 <div class="w-11 h-11 bg-gold rounded-2xl flex items-center justify-center">✨</div>
@@ -92,23 +93,20 @@ Book Now
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="py-20 px-5 section-dark">
+<section id="about" class="py-20 px-5">
 <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 <div class="fade-in">
 <h2 class="text-4xl md:text-5xl gold mb-6">Your Beauty Destination</h2>
-<p>
-Fusion Salon offers premium unisex beauty services with expert stylists.
-</p>
+<p>Fusion Salon offers premium unisex beauty services with expert stylists.</p>
 </div>
 <div class="overflow-hidden rounded-3xl fade-in">
-<img src="https://salondeauville.com/wp-content/uploads/2024/06/keratin-hair-straightening-montreal-2.png"
-class="w-full img-hover">
+<img src="https://salondeauville.com/wp-content/uploads/2024/06/keratin-hair-straightening-montreal-2.png" class="w-full img-hover">
 </div>
 </div>
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="py-20 px-5 section-dark">
+<section id="services" class="py-20 px-5">
 <div class="max-w-6xl mx-auto">
 <h2 class="text-4xl md:text-5xl text-center gold mb-12 fade-in">Our Services</h2>
 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -137,7 +135,7 @@ class="w-full img-hover">
 </section>
 
 <!-- GALLERY -->
-<section id="gallery" class="py-20 px-5 section-dark">
+<section id="gallery" class="py-20 px-5">
 <div class="max-w-6xl mx-auto">
 <h2 class="text-4xl md:text-5xl text-center gold mb-12 fade-in">Gallery</h2>
 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -152,7 +150,7 @@ class="w-full img-hover">
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="py-20 px-5 section-dark">
+<section id="contact" class="py-20 px-5">
 <div class="max-w-4xl mx-auto text-center fade-in">
 <h2 class="text-4xl md:text-5xl gold mb-10">Book Appointment</h2>
 <form class="card p-8 rounded-3xl space-y-5">
@@ -166,7 +164,7 @@ Send Request
 </div>
 </section>
 
-<footer class="section-dark text-center py-10 border-t border-gold">
+<footer class="text-center py-10 border-t border-gold">
 <p>© 2026 Fusion Salon Hisar</p>
 </footer>
 
