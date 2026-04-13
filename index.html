@@ -24,31 +24,22 @@ body {
     url('https://imagehairlondon.co.uk/wp-content/uploads/2025/09/keratin-treatment-application-salon.jpg-1024x683.png') center/cover no-repeat;
 }
 
-/* SINGLE UNIFORM SYSTEM */
-:root {
-    --bg: #24272B;
-    --section: #1c1c1c;
-    --text: #E5E5E5;
-    --gold: #D4AF37;
-}
+.gold { color: #D4AF37; }
+.bg-gold { background-color: #D4AF37; }
+.border-gold { border-color: #D4AF37; }
 
-.gold { color: var(--gold); }
-.bg-gold { background-color: var(--gold); }
-.border-gold { border-color: var(--gold); }
-
-.section-dark { background: var(--bg); }
-.section-soft { background: var(--section); }
+.section-dark { background: #24272B; }
+.section-soft { background: #1c1c1c; }
 
 .card {
-    background: var(--section);
+    background: #1c1c1c;
+    transition: all 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(212,175,55,0.2);
 }
 
-/* IMPORTANT: force text consistency */
-p, h1, h2, h3, h4, h5, h6, a {
-    color: inherit;
-}
-
-/* hover effects untouched */
 .img-hover {
     transition: transform 0.5s ease;
 }
