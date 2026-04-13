@@ -4,130 +4,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fusion Salon Hisar | Premium Unisex Beauty Salon</title>
-    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
+        
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://www.justdial.com/Hissar/Fusion-Salon-Red-Square-Market/9999P1662-1662-190404232641-K1H9_BZDET/photo-1') center/cover no-repeat;
+        }
+        .logo-font { font-family: 'Playfair Display', serif; }
+    </style>
 </head>
-<body>
+<body class="font-sans bg-white">
 
     <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <span class="logo-icon">💇‍♀️</span>
-                <span class="logo-text">Fusion</span>
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-5 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-11 h-11 bg-pink-600 rounded-2xl flex items-center justify-center text-3xl">💇‍♀️</div>
+                <h1 class="logo-font text-4xl font-bold text-pink-700">Fusion</h1>
             </div>
             
-            <div class="nav-links" id="navLinks">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#contact">Contact</a>
+            <div class="hidden md:flex gap-8 text-lg">
+                <a href="#home" class="hover:text-pink-600">Home</a>
+                <a href="#about" class="hover:text-pink-600">About</a>
+                <a href="#services" class="hover:text-pink-600">Services</a>
+                <a href="#gallery" class="hover:text-pink-600">Gallery</a>
+                <a href="#contact" class="hover:text-pink-600">Contact</a>
             </div>
-
-            <a href="#contact" class="book-btn">Book Now</a>
-
-            <!-- Mobile Hamburger -->
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
+            
+            <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" 
+                    class="bg-pink-600 text-white px-7 py-3 rounded-3xl font-semibold hover:bg-pink-700 transition">
+                Book Now
             </button>
         </div>
     </nav>
 
     <!-- Hero -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Fusion Salon Hisar</h1>
-            <p class="tagline">Where Everything is Better...</p>
-            <p class="subtag">Premium Unisex Salon • Bridal Makeup • Hair Transformations • Nail Art</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn-primary">Book Appointment</a>
-                <a href="https://www.instagram.com/fusionsalonhisar" target="_blank" class="btn-secondary">Instagram</a>
+    <section id="home" class="hero-bg h-screen flex items-center text-white text-center px-5">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-5xl md:text-7xl font-bold logo-font mb-4">Fusion Salon Hisar</h2>
+            <p class="text-2xl md:text-4xl mb-6">"Where Everything is Better..."</p>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto mb-10">Premium Unisex Salon • Bridal Makeup • Hair Styling • Nail Art</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact" class="bg-white text-pink-700 px-10 py-5 rounded-3xl text-xl font-semibold hover:scale-105 transition">Book Appointment</a>
+                <a href="https://www.instagram.com/fusionsalonhisar" target="_blank" class="border-2 border-white px-10 py-5 rounded-3xl text-xl font-semibold hover:bg-white hover:text-pink-700 transition">Instagram</a>
             </div>
         </div>
     </section>
 
     <!-- About -->
-    <section id="about" class="section">
-        <h2>Premium Beauty Experience in Hisar</h2>
-        <div class="about-grid">
-            <div class="about-text">
-                <p>Fusion Salon is a modern unisex beauty destination in Hisar. We combine professional expertise with luxurious care to deliver stunning results in bridal makeup, hair styling, keratin treatments, and nail artistry.</p>
-                <div class="stats">
-                    <div><strong>7000+</strong><span>Happy Clients</span></div>
-                    <div><strong>4.8</strong><span>Average Rating</span></div>
+    <section id="about" class="py-20 px-5 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Your Beauty Destination in Hisar</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Fusion Salon offers premium unisex beauty services with expert stylists. 
+                        From stunning bridal makeup to modern hair transformations and professional nail art — we make you look and feel your best.
+                    </p>
                 </div>
+                <img src="https://picsum.photos/id/1015/800/550" alt="Salon Interior" class="rounded-3xl shadow-2xl w-full">
             </div>
-            <img src="https://picsum.photos/id/1015/800/550" alt="Fusion Salon Interior">
         </div>
     </section>
 
     <!-- Services -->
-    <section id="services" class="section bg-light">
-        <h2>Our Signature Services</h2>
-        <div class="services-grid">
-            <div class="card">
-                <i class="fas fa-cut"></i>
-                <h3>Hair Styling & Cuts</h3>
-                <p>Trendy cuts, keratin, hair spa & coloring</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-paint-brush"></i>
-                <h3>Bridal & Party Makeup</h3>
-                <p>HD makeup & traditional looks</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-spa"></i>
-                <h3>Hair Treatments</h3>
-                <p>Keratin • Smoothening • Global Color</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-hand-sparkles"></i>
-                <h3>Nail Art & Extensions</h3>
-                <p>Gel nails, acrylic & beautiful designs</p>
+    <section id="services" class="py-20 px-5 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">Our Services</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition">
+                    <i class="fas fa-cut text-5xl text-pink-600 mb-6"></i>
+                    <h3 class="text-2xl font-semibold">Hair Styling & Cuts</h3>
+                    <p class="text-gray-600 mt-2">Modern cuts, keratin & hair spa</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition">
+                    <i class="fas fa-paint-brush text-5xl text-pink-600 mb-6"></i>
+                    <h3 class="text-2xl font-semibold">Bridal Makeup</h3>
+                    <p class="text-gray-600 mt-2">HD & Traditional Bridal Looks</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition">
+                    <i class="fas fa-spa text-5xl text-pink-600 mb-6"></i>
+                    <h3 class="text-2xl font-semibold">Hair Treatments</h3>
+                    <p class="text-gray-600 mt-2">Keratin • Smoothening • Coloring</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition">
+                    <i class="fas fa-hand-sparkles text-5xl text-pink-600 mb-6"></i>
+                    <h3 class="text-2xl font-semibold">Nail Art</h3>
+                    <p class="text-gray-600 mt-2">Extensions • Gel • Designs</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Gallery -->
-    <section id="gallery" class="section">
-        <h2>Our Transformations</h2>
-        <div class="gallery-grid">
-            <img src="https://picsum.photos/id/1011/600/700" alt="Bridal Makeup">
-            <img src="https://picsum.photos/id/133/600/700" alt="Hair Transformation">
-            <img src="https://picsum.photos/id/201/600/700" alt="Nail Art">
-            <img src="https://www.justdial.com/Hissar/Fusion-Salon-Red-Square-Market/9999P1662-1662-190404232641-K1H9_BZDET/photo-1" alt="Salon Exterior">
-            <img src="https://picsum.photos/id/1005/600/700" alt="Salon Interior">
-            <img src="https://picsum.photos/id/866/600/700" alt="Keratin Treatment">
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section bg-light">
-        <h2>Book Your Appointment Today</h2>
-        <div class="contact-grid">
-            <form id="bookingForm">
-                <input type="text" placeholder="Full Name" required>
-                <input type="tel" placeholder="Phone Number" required>
-                <input type="date" required>
-                <textarea placeholder="Tell us what service you need..." rows="4"></textarea>
-                <button type="submit">Send Booking Request</button>
-            </form>
-            
-            <div class="contact-info">
-                <h3>Visit Us</h3>
-                <p><i class="fas fa-map-marker-alt"></i> SCO 90-91, PLA Shopping Complex, Delhi Road, Hisar, Haryana 125001</p>
-                <p><i class="fas fa-phone"></i> 99926 96336 | 93153 03664</p>
-                <p><i class="fas fa-clock"></i> 10:00 AM - 8:00 PM (All Days)</p>
+    <section id="gallery" class="py-20 px-5 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">Our Work</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <img src="https://img.freepik.com/free-photo/women-making-preparations-wedding_23-2149184417.jpg?semt=ais_hybrid&w=740&q=80" alt="Bridal" class="rounded-3xl shadow hover:scale-105 transition">
+                <img src="https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGFpciUyMHNhbG9ufGVufDB8fDB8fHww" alt="Hair" class="rounded-3xl shadow hover:scale-105 transition">
+                <img src="https://luxurylondon.co.uk/wp-content/uploads/2023/07/Townhouse-Kings-Road-Chelsea-nail-bar.jpg" alt="Nail" class="rounded-3xl shadow hover:scale-105 transition">
+                <img src="https://images.squarespace-cdn.com/content/v1/6091e6edc456d57a746254a2/1850bf2a-85fe-4011-81ef-5e726d5ed752/Salon+Main+IMG_0067.jpg" alt="Salon" class="rounded-3xl shadow hover:scale-105 transition">
+                <img src="https://images.fresha.com/locations/location-profile-images/2568286/5628453/8d587ccc-1c68-4ae1-b1fa-984e1148762a-EstiloUrbanoGentsSalon-AE-EmirateOfUmmAlQuwain-UmmAlQuwain-Fresha.jpg?class=venue-gallery-mobile&f_width=3840" alt="Interior" class="rounded-3xl shadow hover:scale-105 transition">
+                <img src="https://assets.clevelandclinic.org/transform/1beff69c-8478-426f-ab82-45bd89127b1c/keratin-hair-treatment-1196374963_770x533_jpg" alt="Keratin" class="rounded-3xl shadow hover:scale-105 transition">
             </div>
         </div>
     </section>
 
-    <footer>
+    <!-- Contact -->
+    <section id="contact" class="py-20 px-5 bg-pink-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">Book Your Appointment</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <form id="bookingForm" class="bg-white p-8 md:p-10 rounded-3xl shadow space-y-6">
+                    <input type="text" placeholder="Full Name" required class="w-full p-5 rounded-2xl border focus:border-pink-600 outline-none">
+                    <input type="tel" placeholder="Phone Number" required class="w-full p-5 rounded-2xl border focus:border-pink-600 outline-none">
+                    <input type="date" required class="w-full p-5 rounded-2xl border focus:border-pink-600 outline-none">
+                    <textarea placeholder="Which service do you want?" rows="4" class="w-full p-5 rounded-2xl border focus:border-pink-600 outline-none"></textarea>
+                    <button type="submit" class="w-full bg-pink-600 text-white py-6 rounded-3xl text-xl font-semibold hover:bg-pink-700">Send Request</button>
+                </form>
+
+                <div class="bg-white p-8 md:p-10 rounded-3xl shadow">
+                    <h3 class="text-2xl font-semibold mb-6">Visit Us</h3>
+                    <p class="text-lg mb-4">SCO 90-91, PLA Shopping Complex, Delhi Road, Hisar, Haryana 125001</p>
+                    <p class="text-lg">📞 99926 96336 | 93153 03664</p>
+                    <p class="text-sm text-gray-500 mt-8">Open Daily: 10:00 AM - 8:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12 text-center">
         <p>© 2026 Fusion Salon Hisar • All Rights Reserved</p>
-        <p>Academic Project | Real Local Business</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('✅ Thank you! Your booking request has been sent to Fusion Salon Hisar. They will contact you soon!');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
