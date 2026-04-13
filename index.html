@@ -10,13 +10,20 @@
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
         
         .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
                         url('https://imagehairlondon.co.uk/wp-content/uploads/2025/09/keratin-treatment-application-salon.jpg-1024x683.png') center/cover no-repeat;
         }
+
         .logo-font { font-family: 'Playfair Display', serif; }
+
+        /* GOLD THEME */
         .gold { color: #D4AF37; }
         .bg-gold { background-color: #D4AF37; }
         .border-gold { border-color: #D4AF37; }
+
+        .hover-gold:hover { color: #D4AF37; }
+        .hover-bg-gold:hover { background-color: #D4AF37; color: white; }
+
     </style>
 </head>
 <body class="font-sans bg-white">
@@ -30,11 +37,11 @@
             </div>
             
             <div class="hidden md:flex gap-8 text-lg">
-                <a href="#home" class="hover:text-yellow-600">Home</a>
-                <a href="#about" class="hover:text-yellow-600">About</a>
-                <a href="#services" class="hover:text-yellow-600">Services</a>
-                <a href="#gallery" class="hover:text-yellow-600">Gallery</a>
-                <a href="#contact" class="hover:text-yellow-600">Contact</a>
+                <a href="#home" class="hover-gold">Home</a>
+                <a href="#about" class="hover-gold">About</a>
+                <a href="#services" class="hover-gold">Services</a>
+                <a href="#gallery" class="hover-gold">Gallery</a>
+                <a href="#contact" class="hover-gold">Contact</a>
             </div>
             
             <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" 
@@ -52,7 +59,7 @@
             <p class="text-lg md:text-xl max-w-2xl mx-auto mb-10">Premium Unisex Salon • Bridal Makeup • Hair Styling • Nail Art</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="#contact" class="bg-white gold px-10 py-5 rounded-3xl text-xl font-semibold hover:scale-105 transition">Book Appointment</a>
-                <a href="https://www.instagram.com/fusionsalonhisar" target="_blank" class="border-2 border-white px-10 py-5 rounded-3xl text-xl font-semibold hover:bg-white gold transition">Instagram</a>
+                <a href="https://www.instagram.com/fusionsalonhisar" target="_blank" class="border-2 border-white px-10 py-5 rounded-3xl text-xl font-semibold hover-bg-gold transition">Instagram</a>
             </div>
         </div>
     </section>
@@ -62,7 +69,7 @@
         <div class="max-w-6xl mx-auto">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Your Beauty Destination in Hisar</h2>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 gold">Your Beauty Destination in Hisar</h2>
                     <p class="text-lg text-gray-600 leading-relaxed">
                         Fusion Salon offers premium unisex beauty services with expert stylists. 
                         From stunning bridal makeup to modern hair transformations and professional nail art — we make you look and feel your best.
@@ -76,7 +83,7 @@
     <!-- Services -->
     <section id="services" class="py-20 px-5 bg-gray-50">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">Our Services</h2>
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 gold">Our Services</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition">
                     <i class="fas fa-cut text-5xl gold mb-6"></i>
@@ -102,21 +109,36 @@
         </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="py-20 px-5 bg-yellow-50">
+    <!-- Gallery -->
+    <section id="gallery" class="py-20 px-5 bg-white">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">Book Your Appointment</h2>
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 gold">Our Work</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-0.5">
+                <img src="https://img.freepik.com/free-photo/women-making-preparations-wedding_23-2149184417.jpg?semt=ais_hybrid&w=740&q=80" width="300" height="200" class="rounded-3xl shadow hover:scale-105 transition">
+                <img src="https://images.unsplash.com/photo-1634449571010-02389ed0f9b0" width="300" height="200" class="rounded-3xl shadow hover:scale-105 transition">
+                <img src="https://luxurylondon.co.uk/wp-content/uploads/2023/07/Townhouse-Kings-Road-Chelsea-nail-bar.jpg" width="300" height="200" class="rounded-3xl shadow hover:scale-105 transition">
+                <img src="https://images.squarespace-cdn.com/content/v1/6091e6edc456d57a746254a2/Salon+Main+IMG_0067.jpg" width="300" height="200" class="rounded-3xl shadow hover:scale-105 transition">
+                <img src="https://images.fresha.com/locations/location-profile-images/2568286/5628453/sample.jpg" width="300" height="200" class="rounded-3xl shadow hover:scale-105 transition">
+                <img src="https://assets.clevelandclinic.org/keratin.jpg" width="300" height="200" class="rounded-3xl shadow hover:scale-105 transition">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 px-5 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 gold">Book Your Appointment</h2>
             <div class="grid md:grid-cols-2 gap-10">
                 <form id="bookingForm" class="bg-white p-8 md:p-10 rounded-3xl shadow space-y-6">
-                    <input type="text" placeholder="Full Name" required class="w-full p-5 rounded-2xl border focus:border-yellow-600 outline-none">
-                    <input type="tel" placeholder="Phone Number" required class="w-full p-5 rounded-2xl border focus:border-yellow-600 outline-none">
-                    <input type="date" required class="w-full p-5 rounded-2xl border focus:border-yellow-600 outline-none">
-                    <textarea placeholder="Which service do you want?" rows="4" class="w-full p-5 rounded-2xl border focus:border-yellow-600 outline-none"></textarea>
+                    <input type="text" placeholder="Full Name" required class="w-full p-5 rounded-2xl border focus:border-gold outline-none">
+                    <input type="tel" placeholder="Phone Number" required class="w-full p-5 rounded-2xl border focus:border-gold outline-none">
+                    <input type="date" required class="w-full p-5 rounded-2xl border focus:border-gold outline-none">
+                    <textarea placeholder="Which service do you want?" rows="4" class="w-full p-5 rounded-2xl border focus:border-gold outline-none"></textarea>
                     <button type="submit" class="w-full bg-gold text-white py-6 rounded-3xl text-xl font-semibold hover:opacity-90">Send Request</button>
                 </form>
 
                 <div class="bg-white p-8 md:p-10 rounded-3xl shadow">
-                    <h3 class="text-2xl font-semibold mb-6">Visit Us</h3>
+                    <h3 class="text-2xl font-semibold mb-6 gold">Visit Us</h3>
                     <p class="text-lg mb-4">SCO 90-91, PLA Shopping Complex, Delhi Road, Hisar, Haryana 125001</p>
                     <p class="text-lg">📞 99926 96336 | 93153 03664</p>
                     <p class="text-sm text-gray-500 mt-8">Open Daily: 10:00 AM - 8:00 PM</p>
@@ -132,7 +154,7 @@
     <script>
         document.getElementById('bookingForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('✅ Thank you! Your booking request has been sent to Fusion Salon Hisar. They will contact you soon!');
+            alert('✅ Thank you! Your booking request has been sent!');
             this.reset();
         });
     </script>
