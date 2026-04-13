@@ -14,7 +14,7 @@ body {
 
 .navbar {
     background: white;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -23,7 +23,7 @@ body {
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem 2rem;
+    padding: 1.2rem 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -33,7 +33,7 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: 2.2rem;
+    font-size: 2.3rem;
     color: #db2777;
 }
 
@@ -43,7 +43,7 @@ body {
 }
 
 .nav-links a {
-    margin: 0 15px;
+    margin: 0 18px;
     text-decoration: none;
     color: #333;
     font-weight: 500;
@@ -57,16 +57,23 @@ body {
 .book-btn {
     background: #db2777;
     color: white;
-    padding: 12px 28px;
+    padding: 14px 32px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
+    transition: all 0.3s;
 }
 
+.book-btn:hover {
+    background: #be185d;
+    transform: translateY(-2px);
+}
+
+/* Hero */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                url('https://www.justdial.com/Hissar/Fusion-Unisex-Hair-Beauty-Salon-Near-Town-Park-Ashok-Vihar/9999P1662-1662-170113210218-R9P2_BZDET/photo-1') center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), 
+                url('https://www.justdial.com/Hissar/Fusion-Salon-Red-Square-Market/9999P1662-1662-190404232641-K1H9_BZDET/photo-1') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,54 +83,87 @@ body {
 
 .hero-content h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 4.5rem;
-    margin-bottom: 10px;
+    font-size: 4.8rem;
+    margin-bottom: 12px;
 }
 
-.tagline { font-size: 2.2rem; margin-bottom: 10px; }
-.subtag { font-size: 1.3rem; max-width: 700px; margin: 0 auto 30px; }
+.tagline {
+    font-size: 2.3rem;
+    margin-bottom: 12px;
+}
 
+.subtag {
+    font-size: 1.35rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+/* Buttons */
 .btn-primary, .btn-secondary {
-    padding: 16px 32px;
+    padding: 16px 36px;
     border-radius: 50px;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     margin: 10px;
     text-decoration: none;
     display: inline-block;
+    transition: all 0.3s;
 }
 
-.btn-primary { background: #db2777; color: white; }
-.btn-secondary { border: 2px solid white; color: white; }
+.btn-primary {
+    background: #db2777;
+    color: white;
+}
 
+.btn-primary:hover {
+    background: #be185d;
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #db2777;
+}
+
+/* Sections */
 .section {
-    padding: 80px 20px;
+    padding: 90px 20px;
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
 }
 
-.bg-light { background: #f9fafb; }
-
-h2 {
-    font-size: 3rem;
-    margin-bottom: 40px;
-    color: #db2777;
+.bg-light {
+    background: #f9fafb;
 }
 
+h2 {
+    font-size: 3.2rem;
+    margin-bottom: 50px;
+    color: #db2777;
+    font-family: 'Playfair Display', serif;
+}
+
+/* About */
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 50px;
     align-items: center;
 }
 
 .about-grid img {
     width: 100%;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
 
-.services-grid, .gallery-grid {
+/* Services & Cards */
+.services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
@@ -131,35 +171,56 @@ h2 {
 
 .card {
     background: white;
-    padding: 30px 20px;
+    padding: 35px 25px;
     border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    transition: 0.3s;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: all 0.4s;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
 .card i {
-    font-size: 3.5rem;
+    font-size: 3.8rem;
     color: #db2777;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
+/* Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.4s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.04);
+}
+
+/* Contact */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    max-width: 900px;
+    gap: 50px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 form input, form textarea, form button {
     width: 100%;
-    padding: 15px;
-    margin-bottom: 15px;
+    padding: 16px;
+    margin-bottom: 18px;
     border: 1px solid #ddd;
     border-radius: 12px;
     font-size: 1.1rem;
@@ -171,17 +232,24 @@ form button {
     border: none;
     cursor: pointer;
     font-weight: 600;
-    padding: 16px;
+    padding: 18px;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #be185d;
 }
 
 .contact-info p {
-    margin: 15px 0;
-    font-size: 1.1rem;
+    margin: 18px 0;
+    font-size: 1.15rem;
 }
 
+/* Footer */
 footer {
     background: #1f2937;
     color: white;
     text-align: center;
-    padding: 40px 20px;
+    padding: 45px 20px;
 }
