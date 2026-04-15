@@ -21,6 +21,7 @@ body {
 .gold { color: #D4AF37; }
 .bg-gold { background-color: #D4AF37; }
 .border-gold { border-color: #D4AF37; }
+
 section, nav, footer {
     background-color: #24272B !important;
 }
@@ -51,10 +52,8 @@ section, nav, footer {
 </head>
 <body class="font-sans">
 
-<!-- NAVBAR -->
 <nav class="border-b border-gold sticky top-0 z-50">
 <div class="max-w-7xl mx-auto px-5 py-5 flex justify-between items-center">
-    
     <a href="#home" class="flex items-center gap-3">
         <div class="w-11 h-11 bg-gold rounded-2xl flex items-center justify-center">✨</div>
         <h1 class="logo-font text-4xl gold">Fusion</h1>
@@ -75,7 +74,6 @@ section, nav, footer {
 </div>
 </nav>
 
-<!-- HERO -->
 <section id="home" class="hero-bg h-screen flex items-center text-center px-5">
 <div class="max-w-4xl mx-auto fade-in">
 <h2 class="text-5xl md:text-7xl font-bold logo-font gold mb-4">Fusion Salon Hisar</h2>
@@ -88,7 +86,6 @@ section, nav, footer {
 </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about" class="py-20 px-5">
 <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 <div class="fade-in">
@@ -101,7 +98,6 @@ section, nav, footer {
 </div>
 </section>
 
-<!-- SERVICES -->
 <section id="services" class="py-20 px-5">
 <div class="max-w-6xl mx-auto">
 <h2 class="text-4xl md:text-5xl text-center gold mb-12 fade-in">Our Services</h2>
@@ -130,7 +126,6 @@ section, nav, footer {
 </div>
 </section>
 
-<!-- GALLERY -->
 <section id="gallery" class="py-20 px-5">
 <div class="max-w-6xl mx-auto">
 <h2 class="text-4xl md:text-5xl text-center gold mb-12 fade-in">Gallery</h2>
@@ -145,7 +140,6 @@ section, nav, footer {
 </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="py-20 px-5">
 <div class="max-w-4xl mx-auto text-center fade-in">
 <h2 class="text-4xl md:text-5xl gold mb-10">Book Appointment</h2>
@@ -165,14 +159,12 @@ Send Request
 </footer>
 
 <script>
-// Form Submission Alert
 document.getElementById('bookingForm').addEventListener('submit', function(e) {
     e.preventDefault();
     alert("✅ Thank you! Your booking request has been sent to Fusion Salon Hisar.\n\nWe will contact you soon!");
     this.reset();
 });
 
-// Fade-in Animation
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if(entry.isIntersecting){
