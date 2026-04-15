@@ -4,8 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fusion Salon Hisar</title>
+
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
 
@@ -15,7 +17,9 @@ body {
     scroll-behavior: smooth;
 }
 
-.logo-font { font-family: 'Playfair Display', serif; }
+.logo-font {
+    font-family: 'Playfair Display', serif;
+}
 
 .hero-bg {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
@@ -26,45 +30,99 @@ body {
 .bg-gold { background-color: #D4AF37; }
 .border-gold { border-color: #D4AF37; }
 
-/* Uniform Background */
-section, nav, footer {
+/* BACKGROUND */
+section, footer {
     background-color: #24272B !important;
 }
 
+/* GLASS */
+.glass {
+    background: rgba(28, 28, 28, 0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* NAVBAR */
+.navbar-glass {
+    background: rgba(36, 39, 43, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+/* LOGO ANIMATION */
+.logo-animate {
+    transition: all 0.3s ease;
+}
+
+.logo-animate:hover {
+    transform: translateY(-2px) scale(1.05);
+    text-shadow: 0 0 12px rgba(212,175,55,0.6);
+}
+
+/* CARDS */
 .card {
     background: #1c1c1c;
     transition: all 0.3s ease;
 }
+
 .card:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 25px rgba(212,175,55,0.2);
 }
+
+/* IMAGE HOVER */
 .img-hover {
-    transition: transform 0.5s ease;
+    transition: transform 0.6s ease, filter 0.4s ease, box-shadow 0.4s ease;
 }
+
 .img-hover:hover {
-    transform: scale(1.1);
+    transform: scale(1.12);
+    filter: brightness(1.08);
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
 }
+
+/* BUTTON ANIMATION */
+.btn-gold {
+    transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+}
+
+.btn-gold:active {
+    transform: scale(0.96);
+}
+
+/* FADE-IN */
 .fade-in {
     opacity: 0;
     transform: translateY(40px);
     transition: all 1s ease;
 }
+
 .fade-in.show {
     opacity: 1;
     transform: translateY(0);
 }
 </style>
 </head>
+
 <body class="font-sans">
 
 <!-- NAVBAR -->
-<nav class="border-b border-gold sticky top-0 z-50">
+<nav class="navbar-glass sticky top-0 z-50">
 <div class="max-w-7xl mx-auto px-5 py-5 flex justify-between items-center">
-<div class="flex items-center gap-3">
+
+<a href="#home" class="flex items-center gap-3 logo-animate">
 <div class="w-11 h-11 bg-gold rounded-2xl flex items-center justify-center">✨</div>
 <h1 class="logo-font text-4xl gold">Fusion</h1>
-</div>
+</a>
+
 <div class="hidden md:flex gap-8">
 <a href="#home" class="hover:text-[#D4AF37]">Home</a>
 <a href="#about" class="hover:text-[#D4AF37]">About</a>
@@ -72,22 +130,40 @@ section, nav, footer {
 <a href="#gallery" class="hover:text-[#D4AF37]">Gallery</a>
 <a href="#contact" class="hover:text-[#D4AF37]">Contact</a>
 </div>
+
 <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
-class="bg-gold text-black px-6 py-3 rounded-3xl font-semibold hover:opacity-90">
+class="bg-gold text-black px-6 py-3 rounded-3xl font-semibold btn-gold">
 Book Now
 </button>
+
 </div>
 </nav>
 
 <!-- HERO -->
 <section id="home" class="hero-bg h-screen flex items-center text-center px-5">
 <div class="max-w-4xl mx-auto fade-in">
-<h2 class="text-5xl md:text-7xl font-bold logo-font gold mb-4">Fusion Salon Hisar</h2>
+
+<h2 class="text-5xl md:text-7xl font-bold logo-font gold mb-4">
+Fusion Salon Hisar
+</h2>
+
 <p class="text-2xl mb-6">Luxury Beauty Experience</p>
-<p class="mb-10">Premium Unisex Salon • Bridal Makeup • Hair Styling • Nail Art</p>
+
+<p class="mb-10">
+Premium Unisex Salon • Bridal Makeup • Hair Styling • Nail Art
+</p>
+
 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-<a href="#contact" class="bg-gold text-black px-10 py-5 rounded-3xl font-semibold hover:scale-105 transition">Book Appointment</a>
-<a href="https://www.instagram.com/fusionsalonhisar" target="_blank" class="border border-gold px-10 py-5 rounded-3xl hover:bg-gold hover:text-black transition">Instagram</a>
+
+<a href="#contact" class="bg-gold text-black px-10 py-5 rounded-3xl font-semibold btn-gold">
+Book Appointment
+</a>
+
+<a href="https://www.instagram.com/fusionsalonhisar" target="_blank"
+class="border border-gold px-10 py-5 rounded-3xl btn-gold">
+Instagram
+</a>
+
 </div>
 </div>
 </section>
@@ -95,41 +171,52 @@ Book Now
 <!-- ABOUT -->
 <section id="about" class="py-20 px-5">
 <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
 <div class="fade-in">
 <h2 class="text-4xl md:text-5xl gold mb-6">Your Beauty Destination</h2>
 <p>Fusion Salon offers premium unisex beauty services with expert stylists.</p>
 </div>
+
 <div class="overflow-hidden rounded-3xl fade-in">
-<img src="https://salondeauville.com/wp-content/uploads/2024/06/keratin-hair-straightening-montreal-2.png" class="w-full img-hover">
+<img src="https://salondeauville.com/wp-content/uploads/2024/06/keratin-hair-straightening-montreal-2.png"
+class="w-full img-hover">
 </div>
+
 </div>
 </section>
 
 <!-- SERVICES -->
 <section id="services" class="py-20 px-5">
 <div class="max-w-6xl mx-auto">
+
 <h2 class="text-4xl md:text-5xl text-center gold mb-12 fade-in">Our Services</h2>
+
 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
 <div class="card p-8 rounded-3xl fade-in">
 <i class="fas fa-cut text-4xl gold mb-4"></i>
 <h3>Hair Styling</h3>
 <p>Cuts, spa & keratin</p>
 </div>
+
 <div class="card p-8 rounded-3xl fade-in">
 <i class="fas fa-paint-brush text-4xl gold mb-4"></i>
 <h3>Bridal Makeup</h3>
 <p>HD & luxury looks</p>
 </div>
+
 <div class="card p-8 rounded-3xl fade-in">
 <i class="fas fa-spa text-4xl gold mb-4"></i>
 <h3>Treatments</h3>
 <p>Smoothening & color</p>
 </div>
+
 <div class="card p-8 rounded-3xl fade-in">
 <i class="fas fa-hand-sparkles text-4xl gold mb-4"></i>
 <h3>Nails</h3>
 <p>Gel & extensions</p>
 </div>
+
 </div>
 </div>
 </section>
@@ -137,34 +224,38 @@ Book Now
 <!-- GALLERY -->
 <section id="gallery" class="py-20 px-5">
 <div class="max-w-6xl mx-auto">
+
 <h2 class="text-4xl md:text-5xl text-center gold mb-12 fade-in">Gallery</h2>
+
 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-<img src="https://img.freepik.com/free-photo/women-making-preparations-wedding_23-2149184417.jpg?semt=ais_hybrid&w=740&q=80"
-class="w-full h-64 object-cover rounded-2xl transition duration-500 hover:scale-105 hover:shadow-lg hover:shadow-[rgba(212,175,55,0.3)]">
-<img src="https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?fm=jpg&q=60&w=3000&auto=format&fit=crop"
-class="w-full h-64 object-cover rounded-2xl transition duration-500 hover:scale-105 hover:shadow-lg hover:shadow-[rgba(212,175,55,0.3)]">
-<img src="https://luxurylondon.co.uk/wp-content/uploads/2023/07/Townhouse-Kings-Road-Chelsea-nail-bar.jpg"
-class="w-full h-64 object-cover rounded-2xl transition duration-500 hover:scale-105 hover:shadow-lg hover:shadow-[rgba(212,175,55,0.3)]">
-<img src="https://images.squarespace-cdn.com/content/v1/6091e6edc456d57a746254a2/1850bf2a-85fe-4011-81ef-5e726d5ed752/Salon+Main+IMG_0067.jpg"
-class="w-full h-64 object-cover rounded-2xl transition duration-500 hover:scale-105 hover:shadow-lg hover:shadow-[rgba(212,175,55,0.3)]">
-<img src="https://images.fresha.com/locations/location-profile-images/2568286/5628453/8d587ccc-1c68-4ae1-b1fa-984e1148762a-EstiloUrbanoGentsSalon-AE-EmirateOfUmmAlQuwain-UmmAlQuwain-Fresha.jpg?class=venue-gallery-mobile"
-class="w-full h-64 object-cover rounded-2xl transition duration-500 hover:scale-105 hover:shadow-lg hover:shadow-[rgba(212,175,55,0.3)]">
-<img src="https://assets.clevelandclinic.org/transform/1beff69c-8478-426f-ab82-45bd89127b1c/keratin-hair-treatment-1196374963_770x533_jpg"
-class="w-full h-64 object-cover rounded-2xl transition duration-500 hover:scale-105 hover:shadow-lg hover:shadow-[rgba(212,175,55,0.3)]">
+
+<img src="https://img.freepik.com/free-photo/women-making-preparations-wedding_23-2149184417.jpg?semt=ais_hybrid&w=740&q=80" class="w-full h-64 object-cover rounded-2xl img-hover">
+<img src="https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?fm=jpg&q=60&w=3000&auto=format&fit=crop" class="w-full h-64 object-cover rounded-2xl img-hover">
+<img src="https://luxurylondon.co.uk/wp-content/uploads/2023/07/Townhouse-Kings-Road-Chelsea-nail-bar.jpg" class="w-full h-64 object-cover rounded-2xl img-hover">
+<img src="https://images.squarespace-cdn.com/content/v1/6091e6edc456d57a746254a2/1850bf2a-85fe-4011-81ef-5e726d5ed752/Salon+Main+IMG_0067.jpg" class="w-full h-64 object-cover rounded-2xl img-hover">
+<img src="https://images.fresha.com/locations/location-profile-images/2568286/5628453/8d587ccc-1c68-4ae1-b1fa-984e1148762a-EstiloUrbanoGentsSalon-AE-EmirateOfUmmAlQuwain-UmmAlQuwain-Fresha.jpg?class=venue-gallery-mobile" class="w-full h-64 object-cover rounded-2xl img-hover">
+<img src="https://assets.clevelandclinic.org/transform/1beff69c-8478-426f-ab82-45bd89127b1c/keratin-hair-treatment-1196374963_770x533_jpg" class="w-full h-64 object-cover rounded-2xl img-hover">
+
+</div>
 </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="py-20 px-5">
 <div class="max-w-4xl mx-auto text-center fade-in">
+
 <h2 class="text-4xl md:text-5xl gold mb-10">Book Appointment</h2>
-<form id="bookingForm" class="card p-8 rounded-3xl space-y-5">
+
+<form id="bookingForm" class="glass p-8 rounded-3xl space-y-5">
+
 <input type="text" placeholder="Full Name" required class="w-full p-4 bg-[#24272B] border border-gold rounded-xl">
 <input type="tel" placeholder="Phone Number" required class="w-full p-4 bg-[#24272B] border border-gold rounded-xl">
 <textarea placeholder="Service Required" rows="4" class="w-full p-4 bg-[#24272B] border border-gold rounded-xl"></textarea>
-<button type="submit" class="w-full bg-gold text-black py-4 rounded-xl font-semibold">
+
+<button type="submit" class="w-full bg-gold text-black py-4 rounded-xl font-semibold btn-gold">
 Send Request
 </button>
+
 </form>
 </div>
 </section>
@@ -174,22 +265,22 @@ Send Request
 </footer>
 
 <script>
-// Form Submission Alert
 document.getElementById('bookingForm').addEventListener('submit', function(e) {
     e.preventDefault();
     alert("✅ Thank you! Your booking request has been sent to Fusion Salon Hisar.\n\nWe will contact you soon!");
-    this.reset(); // Clear the form after submission
+    this.reset();
 });
 
-// Fade-in Animation
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-        if(entry.isIntersecting){
+        if (entry.isIntersecting) {
             entry.target.classList.add('show');
         }
     });
 });
+
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
+
 </body>
 </html>
