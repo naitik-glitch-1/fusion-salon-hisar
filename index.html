@@ -7,7 +7,53 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
-<link rel="stylesheet" href="style.css">
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
+
+body {
+    background-color: #24272B;
+    color: #E5E5E5;
+    scroll-behavior: smooth;
+}
+
+.logo-font { font-family: 'Playfair Display', serif; }
+
+.hero-bg {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+    url('https://imagehairlondon.co.uk/wp-content/uploads/2025/09/keratin-treatment-application-salon.jpg-1024x683.png') center/cover no-repeat;
+}
+
+.gold { color: #D4AF37; }
+.bg-gold { background-color: #D4AF37; }
+.border-gold { border-color: #D4AF37; }
+
+/* Uniform Background */
+section, nav, footer {
+    background-color: #24272B !important;
+}
+
+.card {
+    background: #1c1c1c;
+    transition: all 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(212,175,55,0.2);
+}
+.img-hover {
+    transition: transform 0.5s ease;
+}
+.img-hover:hover {
+    transform: scale(1.1);
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+}
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 </style>
 </head>
 <body class="font-sans">
@@ -126,6 +172,24 @@ Send Request
 <footer class="text-center py-10 border-t border-gold">
 <p>© 2026 Fusion Salon Hisar</p>
 </footer>
-<script src="script.js"></script>
+
+<script>
+// Form Submission Alert
+document.getElementById('bookingForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert("✅ Thank you! Your booking request has been sent to Fusion Salon Hisar.\n\nWe will contact you soon!");
+    this.reset(); // Clear the form after submission
+});
+
+// Fade-in Animation
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+});
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
