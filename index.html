@@ -30,7 +30,6 @@ body {
 .bg-gold { background-color: #D4AF37; }
 .border-gold { border-color: #D4AF37; }
 
-/* BACKGROUND */
 section, footer {
     background-color: #24272B !important;
 }
@@ -52,11 +51,10 @@ section, footer {
     border-bottom: 1px solid rgba(212, 175, 55, 0.3);
 }
 
-/* LOGO ANIMATION */
+/* LOGO */
 .logo-animate {
     transition: all 0.3s ease;
 }
-
 .logo-animate:hover {
     transform: translateY(-2px) scale(1.05);
     text-shadow: 0 0 12px rgba(212,175,55,0.6);
@@ -67,7 +65,6 @@ section, footer {
     background: #1c1c1c;
     transition: all 0.3s ease;
 }
-
 .card:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 25px rgba(212,175,55,0.2);
@@ -77,25 +74,32 @@ section, footer {
 .img-hover {
     transition: transform 0.6s ease, filter 0.4s ease, box-shadow 0.4s ease;
 }
-
 .img-hover:hover {
     transform: scale(1.12);
     filter: brightness(1.08);
     box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
 }
 
-/* BUTTON ANIMATION */
+/* BUTTON */
 .btn-gold {
     transition: all 0.3s ease;
 }
-
 .btn-gold:hover {
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
 }
-
 .btn-gold:active {
     transform: scale(0.96);
+}
+
+/* 🔥 GLOW PULSE FIX */
+.glow-pulse {
+    animation: glowPulse 2s infinite;
+}
+@keyframes glowPulse {
+    0% { box-shadow: 0 0 10px rgba(212,175,55,0.3); }
+    50% { box-shadow: 0 0 25px rgba(212,175,55,0.7); }
+    100% { box-shadow: 0 0 10px rgba(212,175,55,0.3); }
 }
 
 /* FADE-IN */
@@ -104,7 +108,6 @@ section, footer {
     transform: translateY(40px);
     transition: all 1s ease;
 }
-
 .fade-in.show {
     opacity: 1;
     transform: translateY(0);
@@ -155,7 +158,7 @@ Premium Unisex Salon • Bridal Makeup • Hair Styling • Nail Art
 
 <div class="flex flex-col sm:flex-row gap-4 justify-center">
 
-<a href="#contact" class="bg-gold text-black px-10 py-5 rounded-3xl font-semibold btn-gold">
+<a href="#contact" class="bg-gold text-black px-10 py-5 rounded-3xl font-semibold btn-gold glow-pulse">
 Book Appointment
 </a>
 
@@ -250,7 +253,6 @@ class="w-full img-hover">
 
 <input type="text" placeholder="Full Name" required class="w-full p-4 bg-[#24272B] border border-gold rounded-xl">
 <input type="tel" placeholder="Phone Number" required class="w-full p-4 bg-[#24272B] border border-gold rounded-xl">
-<textarea placeholder="Service Required" rows="4" class="w-full p-4 bg-[#24272B] border border-gold rounded-xl"></textarea>
 
 <button type="submit" class="w-full bg-gold text-black py-4 rounded-xl font-semibold btn-gold">
 Send Request
